@@ -1,21 +1,21 @@
 ---
-name: learn-bosh
+name: bosh-simple
 
 releases:
-- name: learn-bosh
+- name: bosh-simple
   version: latest
 
 networks:
 - name: default
   subnets:
-  - range: 10.244.0.0/28
-    reserved: [10.244.0.1]
-    static: [10.244.0.2,10.244.0.6,10.244.0.10]
+  - range: 10.0.0.0/22
+    reserved: [10.0.0.1,10.0.0.6]
+    static: [10.0.0.11,10.0.0.12,10.0.0.13]
 
 resource_pools:
 - name: default
   stemcell:
-    name: bosh-warden-boshlite-ubuntu-trusty-go_agent
+    name: bosh-aws-xen-hvm-ubuntu-trusty-go_agent
     version: latest
   network: default
 
@@ -38,5 +38,5 @@ jobs:
   networks:
   - name: default
     static_ips:
-    - 10.244.0.2
+    - 10.0.0.11
   properties: {}

@@ -16,14 +16,19 @@ stemcells:
   os: ubuntu-trusty
   version: latest
 
-jobs:
+instance_groups:
 - name: app
-  templates:
-  - name: app
   instances: 1
+  azs: [z1]
+  jobs:
+  - name: app
+    release: bosh-simple
+    properties:
+      port: 8080
+    templates:
+    - name: app
   vm_type: default
   stemcell: default
   networks:
   - name: default
-  azs: [z1]
-  properties: {}
+

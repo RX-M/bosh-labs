@@ -1,6 +1,12 @@
+#!/bin/bash -eu
+
 set -e -x
 
-cp -a hostinfo/* ${BOSH_INSTALL_TARGET}
+source /var/vcap/packages/golang-1.8-linux/bosh/compile.env
+
+go build hostinfo/hi.go
+
+cp -a hostinfo/hi ${BOSH_INSTALL_TARGET}
 
 cd ${BOSH_INSTALL_TARGET}
 

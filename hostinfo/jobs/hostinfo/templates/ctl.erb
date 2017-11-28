@@ -14,7 +14,7 @@ case $1 in
 
     cd /var/vcap/packages/hostinfo
 
-    exec /var/vcap/packages/hostinfo/hostinfo \
+    exec /var/vcap/packages/hostinfo/hi \
       <%= properties.hostinfo.port %> \
       >>  $LOG_DIR/hostinfo.stdout.log \
       2>> $LOG_DIR/hostinfo.stderr.log

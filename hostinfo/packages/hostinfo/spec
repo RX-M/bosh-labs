@@ -1,6 +1,8 @@
 ---
 name: hostinfo
 
-dependencies: []
+dependencies: 
+- golang-1.9-linux
 
-files: []
+files:
+- hostinfo/**/*

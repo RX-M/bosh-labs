@@ -1,1 +1,6 @@
-name: hostinfo
+---
+blobstore:
+  provider: local
+  options:
+    blobstore_path: /tmp/hostinfoblobs
+final_name: hostinfo

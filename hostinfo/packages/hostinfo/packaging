@@ -1,1 +1,7 @@
-set -e
+set -e -x
+
+cp -a hostinfo/* ${BOSH_INSTALL_TARGET}
+
+cd ${BOSH_INSTALL_TARGET}
+
+

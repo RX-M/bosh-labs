@@ -1,0 +1,5 @@
+check process hostinfo
+  with pidfile /var/vcap/sys/run/hostinfo/pid
+  start program "/var/vcap/jobs/hostinfo/bin/ctl start"
+  stop program "/var/vcap/jobs/hostinfo/bin/ctl stop"
+  group vcap

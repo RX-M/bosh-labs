@@ -1,0 +1,9 @@
+---
+name: hostinfo
+
+templates:
+  ctl.erb: bin/ctl
+
+packages: []
+
+properties: {}

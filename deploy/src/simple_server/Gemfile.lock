@@ -3,7 +3,7 @@ GEM
   specs:
     rack (1.6.12)
     rack-protection (~> 1.5.5)
-      rack
+      rack (1.6.12)
     sinatra (1.4.6)
       rack (~> 1.6.12)
       rack-protection (~> 1.5.5)
